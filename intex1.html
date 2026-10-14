@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Portal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+
+    <header>
+        <div class="logo">🎓 Student<span>Portal</span></div>
+        <p>Learn • Grow • Build Your Future</p>
+    </header>
+
+    <main class="container">
+        <div class="icon">🎓</div>
+        <h1>Student Registration</h1>
+        <p class="subtitle">Start your journey towards a bright future!</p>
+
+        <form id="regForm" novalidate>
+
+            <div class="form-grid">
+                <div class="field">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name"
+                           placeholder="Enter your full name">
+                    <small id="nameError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="roll">Roll Number</label>
+                    <input type="text" id="roll"
+                           placeholder="Enter roll number">
+                    <small id="rollError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email"
+                           placeholder="example@gmail.com">
+                    <small id="emailError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <div class="password-box">
+                        <input type="password" id="password"
+                               placeholder="Create a strong password">
+                        <button type="button" id="togglePassword"
+                                class="eye-btn" aria-label="Show password">
+                            👁
+                        </button>
+                    </div>
+                    <small id="passwordError"></small>
+                    <div class="strength-track">
+                        <div id="strengthBar"></div>
+                    </div>
+                    <small id="strengthText"></small>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="course">Select Course</label>
+                <select id="course">
+                    <option value="">Choose your course</option>
+                    <option value="CSE">Computer Science (CSE)</option>
+                    <option value="IT">Information Technology (IT)</option>
+                    <option value="ECE">Electronics (ECE)</option>
+                    <option value="AIML">Artificial Intelligence & ML</option>
+                    <option value="EEE">Electrical Engineering (EEE)</option>
+                </select>
+                <small id="courseError"></small>
+            </div>
+
+            <div class="field">
+                <label for="file">Upload Student Document</label>
+                <input type="file" id="file" accept=".pdf,.jpg,.jpeg,.png">
+                <small class="hint">Accepted: PDF, JPG, PNG (maximum 5 MB)</small>
+                <small id="fileError"></small>
+            </div>
+
+            <button type="submit" class="register-btn">
+                Register Now <span>→</span>
+            </button>
+
+            <p id="success" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="footer">
+            🔒 Secure Registration <span>•</span> ⚡ Fast & Easy
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
